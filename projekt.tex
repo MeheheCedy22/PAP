@@ -1,26 +1,77 @@
-\documentclass{article}
+\documentclass[12pt,oneside,slovak,a4paper]{article}
+
+\usepackage[slovak]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage{pdfpages}
+\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{titling}
 
-\title{Design and Computer Application Project}
-\author{Marek Čederle		}
-\date{\today}
 
+%\title{   
+%Voľne šíriteľné nástroje na obnovu zmazaných súborov}
+%\author{Marek Čederle\\[2pt]
+%	{\small Slovenská technická univerzita v Bratislave}\\
+%	{\small Fakulta informatiky a informačných technológií}\\
+%	{\small \texttt{xcederlem@stuba.sk}}
+%	}
+%\date{\small \today}
+%
 \begin{document}
 
-\maketitle
+%\vspace{50pt}
+%\maketitle
+%\vspace*{\fill}
+%\pagebreak
+
+\begin{titlepage}
+	\centering
+	{\LARGE \textsc{}\par}
+	\vspace{5cm}
+	{\Large \textsc{Projektovanie aplikácií počítačov}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Úložiská dát serverových aplikácií\par}
+    \vspace{1cm}
+    {\large Slovenská technická univerzita v Bratislave\par}
+    {\large Fakulta informatiky a informačných technológií\par}
+	\vspace{1cm}
+	{\Large\itshape Marek Čederle\par}
+    {\small\texttt{xcederlem@stuba.sk}\par}
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
 
 \tableofcontents
+\vspace*{\fill}
 
-\section{Introduction}
-Lorem ipsum
+\section{Úvod}
+Tu môžete predstaviť\cite{TEST} svoju tému a poskytnúť stručný prehľad toho, o čom budete vo svojom projekte diskutovať.
 
-\section{IP Cameras}
+\section{Lorem Ipsum}
+V tejto časti môžete diskutovať o svojej analýze súborových systémov.
 
+\section{donor epsum}
+Tu môžete diskutovať o svojej analýze voľne dostupných nástrojov na obnovu dát. Môžete tiež spomenúť, prečo ste si pre svoj projekt vybrali konkrétny nástroj (napr. testdisk).
 
-\section{ISO Norms}
+\section{dalsia sekcia}
+V tejto časti môžete diskutovať o svojich experimentoch s vybraným nástrojom na obnovu údajov. Môžete poskytnúť podrobnosti o experimentoch, ktoré ste vykonali, získaných výsledkoch a svojich pozorovaniach.
 
+\section{Záver}
+Tu môžete zhrnúť svoje zistenia a poskytnúť záver pre váš projekt.
 
-\section{Data Storage}
-
-
+\bibliography{literature}
+\bibliographystyle{alpha}
 \end{document}

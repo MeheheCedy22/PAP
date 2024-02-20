@@ -5,3 +5,6 @@ projekt.synctex.gz
 projekt.toc
 projekt.fdb_latexmk
 projekt.fls
+projekt.bbl
+projekt.blg
+projekt.out
