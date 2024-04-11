@@ -1,9 +1,12 @@
 projekt.aux
-projekt.log
-projekt.synctex.gz
-projekt.toc
-projekt.fdb_latexmk
 projekt.fls
+projekt.log
 projekt.bbl
 projekt.blg
 projekt.out
+projekt.toc
+projekt.fdb_latexmk
+projekt.synctex.gz
+projekt.synctex(busy)
+
+TODO.txt
