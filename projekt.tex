@@ -233,20 +233,102 @@ RGB ovládanie & Nepodporuje \\ \hline
 \end{table}
 
 \subsection{Disky}
-\subsubsection{Bootovací Disk}
+Náš systém bude potrebovať okrem dátových diskov aj disk, kde bude uložený samotný operačný systém (bootovací disk). Na tento účel nám bude slúžiť práve SSD disk, ktorý bude umiestnený v M.2 slote na základnej doske.
 
-\subsubsection{Úložné disky}
+\subsubsection{Bootovací disk}
+Ako bootovací disk nám bude bohate postačovať Patriot P300 s veľkosťou 128GB. Disk má rozhranie PCIe verzie 3.0 čo je síce starší štandard ale na naše potreby bude stačiť a naša základná doska aj tak nepodporuje novší štandard. Veľkosť disku prekračuje potreby operačného systému ale keďže ide o veľmi lacnú položku, tak sa neoplatí kupovať nejaký nespoľahlivý USB disk s menšou kapacitou alebo SD kartu. Radšej investupjeme do kvalitného SSD disku ktorý nám bude slúžiť aj do budúcna.
+
+% obrazok boot disku
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.2]{./images/boot-drive.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{Bootovací disk - Patriot P300 128GB \\ Zdroj: https://www.alza.sk/patriot-p300-128gb-d5798224.htm}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Kapacita úložiska (HDD + SSD) & 128 GB (0,13 TB) \\ \hline
+Typ úložiska & SSD \\ \hline
+Formát (Form Factor) & M.2 \\ \hline
+Kapacita disku & 128 GB (0,13 TB) \\ \hline
+Šírka & 22 mm (2,2 cm) \\ \hline
+Výška & 3,8 mm (0,38 cm) \\ \hline
+Hĺbka & 80 mm (8 cm) \\ \hline
+Hmotnosť & 20 g (0,02 kg) \\ \hline
+Farba & Čierna \\ \hline
+Rad disku & Patriot P300 \\ \hline
+Použitie & Do počítača, Do notebooku, Interný \\ \hline
+Rozhranie interné & M.2 (PCIe 3.0 4x NVMe) \\ \hline
+Rýchlosť náhodného čítania & 290 000 IOPS \\ \hline
+Rýchlosť náhodného zápisu & 150 000 IOPS \\ \hline
+Rýchlosť čítania & 1 600 MB/s \\ \hline
+Rýchlosť zápisu & 600 MB/s \\ \hline
+Radič & Silicon Motion SM2263XT \\ \hline
+Veľkosť článku/bunky & TLC (Triple-Level Cell) \\ \hline
+Životnosť disku & 40 TBW \\ \hline
+Typická spotreba & 2,07 W \\ \hline
+Stand-by spotreba (pohotovostná) & 0,37 W (370 mW) \\ \hline
+\end{tabularx}
+\caption{Špecifikácie SSD disku Patriot P300 128GB}
+\end{table}
+
+
+\subsubsection{Dátové disky}
+Pri výbere dátových diskov (najdôležitejšou časťou pre nás) som zohľadniľ internetové recenzie a moje doterajšie znalosti. Rozhodoval som sa medzi WD Red Pro a Seagate IronWolf Pro. Nakoniec som zvolil Seagate IronWolf Pro pretože boli viacej doporučované na internete a majú väčšiu vyrovnávaciu pamäť (cache) čo nám zvýši rýchlosť pri čítaní a zápise dát. Zvolil som 2 TB verziu pretože na naše účely by to bolo dostatočné. Keďže pôjde o 4 disky, tak nám to dáva celkovú kapacitu 8 TB. Ale kvôli použitiu RAIDu\footnote{pozri kapitola RAID} 6 nám ostane len 4 TB reálneho miesta.
+
+% obrazok data disku
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.2]{./images/data-drive.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{Dátový disk - Seagate IronWolf Pro 2 TB \\ Zdroj: https://www.alza.sk/seagate-ironwolf-pro-2-tb-d7470754.htm}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Kapacita úložiska (HDD + SSD) & 2 000 GB (2 TB) \\ \hline
+Typ úložiska & HDD \\ \hline
+Formát (Form Factor) & 3.5" \\ \hline
+Kapacita disku & 1 953,13 GB (1,91 TB) \\ \hline
+Šírka & 101,85 mm (10,19 cm) \\ \hline
+Výška & 26,11 mm (2,61 cm) \\ \hline
+Hĺbka & 146,99 mm (14,7 cm) \\ \hline
+Hmotnosť & 620 g (0,62 kg) \\ \hline
+Farba & Čierna, Červená \\ \hline
+Rad disku & Seagate IronWolf Pro \\ \hline
+Použitie & Do počítača, Dátové úložiská, Interný \\ \hline
+Rozhranie interné & SATA III \\ \hline
+Rýchlosť čítania & 226 MB/s \\ \hline
+Rýchlosť zápisu & 226 MB/s \\ \hline
+Technológia zápisu & CMR \\ \hline
+Vyrovnávacia pamäť & 256 MB \\ \hline
+Radič & Seagate \\ \hline
+Maximálna hlučnosť & 30 dB(A) \\ \hline
+Mean Time Before Failure & 2 000 000 h \\ \hline
+Typická spotreba & 6,7 W \\ \hline
+Stand-by spotreba (pohotovostná) & 1 W (1 000 mW) \\ \hline
+\end{tabularx}
+\caption{Špecifikácie dátového disku Seagate IronWolf Pro 2TB}
+\end{table}
 
 
 \subsection{Zdroj}
-
-\subsection{Sieťová karta}
 
 \subsection{Záložný zdroj v podobe UPS}
 
 \subsection{Kabeláž}
 
 \section{Softér}
+Zo softvérovej časti je treba si zvoliť aký typ redundancie dát chceme, aký operačný systém použijeme pre náš projekt.
 
 \subsection{RAID}
 RAID\footnote{Redundance Array of Independent Disks} je metóda, ktorá nám umožňuje kombinovať viacero diskov do jedného logického celku. Jednotlivé typy polí dosahujú v závislosti od konfigurácie rôznu úroveň zabezpečenia dát pred chybami a stratou spôsobenou zlyhaním hardwaru a rôzne veľké zvýšenie výkonu (dátovej priepustnosti) pri diskových operáciách vo vzťahu k počtu diskov, potrebe špecializovaných radičov polí a tým aj cene riešenia.
@@ -274,7 +356,7 @@ Legenda:
 	\captionsetup{justification=centering,margin=2cm}
 	\includegraphics[width=\linewidth]{./images/nakres-bytu.png}
 	\centering
-	\caption{Pôdorys bytu \\ Zdroj: None, toto som tu nechal len tak}
+	\caption{Pôdorys bytu}
 	\label{fig:floorplan}
 \end{figure}
 
@@ -288,8 +370,8 @@ PC Skriňa & 65,90 &  &  \\ \hline
 Základná doska & 76,90 &  &  \\ \hline
 Procesor & 96,90 &  &  \\ \hline
 Pamäť & 42,90 &  &  \\ \hline
-Bootovací Disk &  &  &  \\ \hline
-Úložné disky &  &  &  \\ \hline
+Bootovací Disk & 15,90 &  &  \\ \hline
+Dátové disky & 4 x 113,90 & 4 x 113,90 & 4 x 113,90 \\ \hline
 Zdroj &  & V cene zariadenia &  \\ \hline
 Sieťová karta & Vstavaná & Vstavaná &  \\ \hline
 Záložný zdroj (UPS) &  &  &  \\ \hline
@@ -307,32 +389,6 @@ Video od LTT
 
 \section{Záver}
 Z cenových porvnani vyplýva že nás systém NAS je oveľa lacnejší ako komerčné riešenia. Taktiež je oveľa viac konfigurovateľný a môžeme si ho prispôsobiť podľa našich potrieb. Avšak pre náročnejších ľudí, ktorý sa radi hrajú s rôznymi technológiami by bolo DIY\footnote{Do It Yourself} riešenie s Raspberry Pi a OpenMediaVault prípadne špecializovaným hardvérom (Video od LTT) za podobnú cenu lepšou voľbou.
-
-% bulleted list plus riadkovanie iba na danu cas textu
-\begin{spacing}{1.0}
-\begin{itemize}
-	\item 
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	\item 
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	\item 
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	\item 
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	\item 
-		\begin{itemize}
-			\item 
-		\end{itemize}
-\end{itemize}
-\end{spacing}
 
 
 \bibliography{literatura}
