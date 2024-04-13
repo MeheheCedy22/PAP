@@ -23,6 +23,7 @@
 \usepackage{caption}
 \usepackage{tabularx}
 \usepackage[numbers]{natbib}
+\usepackage{color}
 
 
 
@@ -62,24 +63,26 @@
 V dobe, kedy digitálne údaje sú veľmi dôležité nielen pre firmy, ale aj pre jednotlivcov, je nevyhnutné mať spoľahlivé riešenie na ukladanie a zálohovanie údajov. Tento projekt sa zameriava na implementáciu spoľahlivého systému ukladania a zálohovania údajov, ktorý môže bežná osoba prevádzkovať v pohodlí svojho domova. Pôjde o vytvorenie systému NAS\footnote{Network Attached Storage} využívajúcej bežne dostupné počítačové komponenty a sieťovú infraštruktúru. Projekt sa venuje aj výberu vhodného softvéru, ktorý efektívne využije možnosti systému NAS. Okrem toho sa zaoberá umiestnením NAS v domácom prostredí, aby bolo zabezpečené pohodlné používanie bez zbytočného rušenia. Dôležitou súčasťou projektu je aj porovnanie nákladov medzi domácou a komerčnou alternatívou.
 
 \section{Hardvér}
-Z dôvodu aby sme čo najviac ušetrili peniaze a pomohli planéte pomocou toho že sa budeme riadiť podľa hesla ``Reduce, Reuse, Recycle'' sme sa rozhodli že použijeme starý počítač s relatívne novými komponentami, ktorý máme doma. Tento počítač bude slúžiť ako základ pre náš NAS systém na ktorom môžeme stavať ďalej alebo ho prípadne vylepšiť.
+Pre potreby projektu som sa snažil vyberať hardvér ktorý má najvyšší pomer cena/výkon. Taktiež som sa snažil vyberať komponenty ktoré sú dostupné na slovenskom trhu.
 
 \subsection{PC Skriňa}
+Pre naše potreby nám bude stačiť PC skriňa Franctal Design CORE 2500, ktorá je dostatočne veľká na to aby sme do nej mohli nainštalovať všetky potrebné komponenty. Obsahuje aj dostatok pozící pre dátové disky ktorých sa do 3,5" slotov zmestí až 4 a následne pomocou redukcie do 5,25" až 2 čo nám dohromady dáva priestor pre 6 diskov.
 
-
+% obrazok PC skrine
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering,margin=2cm}
-	\includegraphics[scale=0.4]{./images/case.png}
+	\includegraphics[width=\linewidth]{./images/case.png} % mozno pouzit scale=0.5
 	\centering
-	\caption{Fractal Design CORE 2500 \\ Zdroj: https://www.alza.sk/fractal-design-core-2500-d2169926.htm}
+	\caption{PC Skriňa - Fractal Design CORE 2500 \\ Zdroj: https://www.alza.sk/fractal-design-core-2500-d2169926.htm}
 \end{figure}
 
+%tabulka špecifikacii skrine
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Parameter} & \textbf{Value} \\ \hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
 Veľkosť & Midi Tower \\ \hline
 Farba & Čierna \\ \hline
 Formát základnej dosky & ATX, mATX (Micro ATX), mITX (Mini ITX) \\ \hline
@@ -110,14 +113,124 @@ Výška & 431 mm (43,1 cm) \\ \hline
 Hĺbka & 450 mm (45 cm) \\ \hline
 Hmotnosť & 5,7 kg \\ \hline
 \end{tabular}
-\caption{PC Skriňa - Fractal Design CORE 2500}
+\caption{Parametre pre Fractal Design CORE 2500}
 \end{table}
 
 \subsection{Základná doska}
+Základná doska ASUS PRIME B450M-A II je ideálnou voľbou pre naše potreby. Ide o základnú dosku so starším AM4 socketom, ktorý však podporuje procesory dostatočne výkonné pre naše potreby a čipsetom B450. Doska obsahuje 4 sloty pre operačnú pamäť RAM, ktoré nám umožnia neskôr rozšíriť pamäťovú kapacitu ak bude treba keďže budeme osádzať iba 2 sloty. Taktiež obsahuje 6 SATA portov, ktoré nám umožnia pripojiť dostatočné množstvo diskov. Obsahuje aj jeden PCIe 3.0 x16 slot, ktorý nám umožní pripojiť sieťovú kartu s vysokou priepustnosťou alebo pomôže rozšíriť kapacitu diskov pomocou pripojenia redukcie na SATA porty.
+
+% obrazok základnej dosky
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[width=\linewidth]{./images/motherboard.png} % mozno pouzit scale=0.5
+	\centering
+	\caption{Základná doska - ASUS PRIME B450M-A II \\ Zdroj: https://www.alza.sk/asus-prime-b450m-a-ii-d6219596.htm}
+\end{figure}
+
+%tabulka špecifikacii základnej dosky
+\begin{table}[h]
+\centering
+\begin{tabularx}{\linewidth}{|l|X|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Socket & AMD AM4 \\ \hline
+Čipset & AMD B450 \\ \hline
+Formát základnej dosky & mATX (Micro ATX) \\ \hline
+Základné funkcie & Integrovaná sieťová karta, Integrovaná zvuková karta, M.2, PCI Express 3.0, Príprava pre CPU s integrovaným GPU, Serial ATA III \\ \hline
+Typ slotov & DIMM \\ \hline
+Typ pamäte & DDR4 \\ \hline
+Počet slotov RAM & 4 × \\ \hline
+Maximálna frekvencia (OC) & 4 400 MHz \\ \hline
+Typ zvukovej karty & Realtek ALC897 \\ \hline
+Počet kanálov zvukovej karty & 8 \\ \hline
+Externé konektory & DVI, HDMI, Jack, PS/2, RJ-45 (LAN) 1Gbps, USB 3.2 Gen 1, USB 3.2 Gen 2, VGA (D-Sub) \\ \hline
+Interné konektory & COM header, M.2 Socket, RGB LED Header, S/PDIF header, Serial ATA III, TPM header, USB 2.0 header, USB 3.2 Gen 1 header \\ \hline
+PCI Express x16 & 1× \\ \hline
+PCI Express x1 & 2× \\ \hline
+USB 3.2 Gen 1 (USB 3.0) & 4× \\ \hline
+USB 3.1 (3.1 gen2) & 2× \\ \hline
+M.2 sloty & 1× \\ \hline
+Serial ATA III & 6× \\ \hline
+\end{tabularx}
+\caption{Špecifikácie základnej dosky ASUS PRIME B450M-A II}
+\end{table}
 
 \subsection{Procesor}
+Vybral som procesor AMD Ryzen 5 4600G, ktorý je dostatočne výkonný pre náš systém NAS. Procesor obsahuje 6 jadier a 12 vlákien s relatívne vysokou frekvenciou. Taktiež obsahuje integrovanú grafickú kartu, čo nám umožní ušetriť peniaze na samostatnej grafickej karte. Taktiež obsahuje chladič s dostatočnou chladiacou kapacitou pre naše využitie, ktorý nám ušetrí ďalšie náklady.
+
+% obrazok procesora
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.3]{./images/cpu.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{Procesor - AMD Ryzen 5 4600G \\ Zdroj: https://www.alza.sk/amd-ryzen-5-4600g-d7463833.htm}
+\end{figure}
+
+%tabulka špecifikacii procesora
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Rad procesora & AMD Ryzen 5 \\ \hline
+Socket & AMD AM4 \\ \hline
+Modelové označenie & AMD Ryzen 5 4600G \\ \hline
+Mikroarchitektúra & Zen 2 \\ \hline
+Počet jadier procesora & 6 × \\ \hline
+Počet vláken & 12 × \\ \hline
+Frekvencia procesora & 3,7 GHz (3,7 GHz) \\ \hline
+Maximálna frekvencia (OC) & 4,2 GHz (4 200 MHz) \\ \hline
+Podporovaný typ pamäte & DDR4 \\ \hline
+Maximálny počet kanálov & 2 × \\ \hline
+Typ integrovanej grafickej karty & AMD Radeon Graphics \\ \hline
+Frekvencia integrovanej grafickej karty & 1 900 MHz \\ \hline
+Funkcie & Automatické pretaktovanie, Virtualizácia, Integrované GPU, Multi-Threading, Chladič v balení \\ \hline
+TDP & 65 W \\ \hline
+Výrobné technológie & 7 nm \\ \hline
+L2 cache & 3 MB \\ \hline
+L3 cache & 8 MB \\ \hline
+\end{tabularx}
+\caption{Špecifikácie procesora AMD Ryzen 5 4600G}
+\end{table}
 
 \subsection{Pamäť}
+Pre naše potreby použijeme 16 GB operačnej pamäte RAM. Je to viac než dosť a bude nám to tvoriť rezervu do budúcna. Vybral som dva moduly Kingston Fury s kapacitou 8 GB a frekvenciou 3200 MHz (2x8GB). Pamäť síce nie nemá funkcionalitu ECC\footnote{Error-correcting code}, avšak potom by sme potrebovali oveľa drahšiu základnú dosku ktorá toto potrebuje.
+
+% obrazok pamäte
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.1]{./images/ram.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{Pamäť - Kingston FURY 16 GB KIT DDR4 3200 MHz CL16 Beast Black \\ Zdroj: https://www.alza.sk/kingston-fury-16-gb-kit-ddr4-3200-mhz-cl16-beast-black-d6622616.htm}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Určenie & Pre počítač \\ \hline
+Vyhotovenie & DIMM \\ \hline
+Typ pamäte & DDR4 \\ \hline
+Modul pamäte & PC4-25600 \\ \hline
+Veľkosť operačnej pamäte RAM & 16 GB \\ \hline
+Počet modulov v balení & 2 ks \\ \hline
+Moduly v balení & 2x8GB \\ \hline
+Frekvencia pamäte & 3 200 MHz \\ \hline
+Časovanie & CL16 \\ \hline
+Časovanie & 16-18-18 \\ \hline
+Priepustnosť & 25 600 MB/s \\ \hline
+Napätie & 1,35 V \\ \hline
+Ďalšie vlastnosti & Single Rank \\ \hline
+Farba podsvietenia & Bez podsvietenia \\ \hline
+RGB ovládanie & Nepodporuje \\ \hline
+\end{tabularx}
+\captionsetup{justification=centering,margin=2cm}
+\caption{Špecifikácie pamäte Kingston FURY 16 GB KIT DDR4 3200 MHz CL16 Beast Black}
+\end{table}
 
 \subsection{Disky}
 \subsubsection{Bootovací Disk}
@@ -131,24 +244,28 @@ Hmotnosť & 5,7 kg \\ \hline
 
 \subsection{Záložný zdroj v podobe UPS}
 
+\subsection{Kabeláž}
+
 \section{Softér}
 
 \subsection{RAID}
+RAID\footnote{Redundance Array of Independent Disks} je metóda, ktorá nám umožňuje kombinovať viacero diskov do jedného logického celku. Jednotlivé typy polí dosahujú v závislosti od konfigurácie rôznu úroveň zabezpečenia dát pred chybami a stratou spôsobenou zlyhaním hardwaru a rôzne veľké zvýšenie výkonu (dátovej priepustnosti) pri diskových operáciách vo vzťahu k počtu diskov, potrebe špecializovaných radičov polí a tým aj cene riešenia.
+
+V našom projekte použijeme RAID 6 ktorý nám zaručuje vysokú redundaciu dát (môžeme prísť až o dva disky) avšak za cenu toho že z celkovej kapacity diskov nám ostane len 50\% (pri 4 diskoch). Avšak nič nám nebráni v prípade potreby použiť až 6 diskov keďže nám to naša PC skriňa umožnuje.
 
 \subsection{Operačný systém}
-TrueNAS or open media vault
-Setupnut SMB na sieti na pristup
+Rozhodoval som sa medzi operačnými systémami TrueNAS a OpenMediaVault. Ďalej vysvetliť!!!
 
 \section{Umiestnenie v domácnosti}
-V naš
+Keďže ide o domáci NAS, ktorý by som sám používal, zameral som sa na umiestnenie v byte, ktoré by bolo pre mňa najvhodnejšie z pohľadu hlučnosti. Rozhodol som sa umiestniť NAS pod stôl v pracovni, kde by nebol počuť, ale zároveň by bol k nemu dobrý prístup. Môžeme si to všimnúť na zjednodušenom pôdoryse[\ref{fig:floorplan}] bytu.
 
-\begin{spacing}{1.0}
 Legenda:
+\begin{spacing}{1.0}
 \begin{itemize}
-	\item Zelenou farbou je označený router.
-	\item Červenou farbou je označený sýstém NAS.
-	\item Modrou farbou sú označené sieťové káble ktoré vedú ku zariadeniam cez rohovú lištu.
-	\item Oranžovou farbou je označený domáci počítač.
+	\item \textcolor{green}{Router}
+	\item \textcolor{red}{NAS}
+	\item \textcolor{blue}{Sieťová kabeláž vedúca cez rohovú lištu}
+	\item \textcolor{orange}{Domáci počítač}
 \end{itemize}
 \end{spacing}
 
@@ -158,9 +275,29 @@ Legenda:
 	\includegraphics[width=\linewidth]{./images/nakres-bytu.png}
 	\centering
 	\caption{Pôdorys bytu \\ Zdroj: None, toto som tu nechal len tak}
+	\label{fig:floorplan}
 \end{figure}
 
 \section{Porovnanie s inými riešeniami}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Komponent} & \textbf{Moje riešenie (€)} & \textbf{DIY riešenie (€)} & \textbf{Komerčné riešenie (€)} \\ \hline
+PC Skriňa & 65,90 &  &  \\ \hline
+Základná doska & 76,90 &  &  \\ \hline
+Procesor & 96,90 &  &  \\ \hline
+Pamäť & 42,90 &  &  \\ \hline
+Bootovací Disk &  &  &  \\ \hline
+Úložné disky &  &  &  \\ \hline
+Zdroj &  & V cene zariadenia &  \\ \hline
+Sieťová karta & Vstavaná & Vstavaná &  \\ \hline
+Záložný zdroj (UPS) &  &  &  \\ \hline
+Softvér & Zadarmo & Zadarmo &  \\ \hline
+\textbf{Celková cena} &  &  &  \\ \hline
+\end{tabular}
+\caption{Porovnanie cien komponentov pre rôzne riešenia}
+\end{table}
 
 \subsection{Komerčné riešenia}
 
@@ -169,6 +306,7 @@ Raspberry Pi + disky s OpenMediaVault
 Video od LTT
 
 \section{Záver}
+Z cenových porvnani vyplýva že nás systém NAS je oveľa lacnejší ako komerčné riešenia. Taktiež je oveľa viac konfigurovateľný a môžeme si ho prispôsobiť podľa našich potrieb. Avšak pre náročnejších ľudí, ktorý sa radi hrajú s rôznymi technológiami by bolo DIY\footnote{Do It Yourself} riešenie s Raspberry Pi a OpenMediaVault prípadne špecializovaným hardvérom (Video od LTT) za podobnú cenu lepšou voľbou.
 
 % bulleted list plus riadkovanie iba na danu cas textu
 \begin{spacing}{1.0}
