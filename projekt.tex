@@ -63,7 +63,7 @@
 V dobe, kedy digitálne údaje sú veľmi dôležité nielen pre firmy, ale aj pre jednotlivcov, je nevyhnutné mať spoľahlivé riešenie na ukladanie a zálohovanie údajov. Tento projekt sa zameriava na implementáciu spoľahlivého systému ukladania a zálohovania údajov, ktorý môže bežná osoba prevádzkovať v pohodlí svojho domova. Pôjde o vytvorenie systému NAS\footnote{Network Attached Storage} využívajúcej bežne dostupné počítačové komponenty a sieťovú infraštruktúru. Projekt sa venuje aj výberu vhodného softvéru, ktorý efektívne využije možnosti systému NAS. Okrem toho sa zaoberá umiestnením NAS v domácom prostredí, aby bolo zabezpečené pohodlné používanie bez zbytočného rušenia. Dôležitou súčasťou projektu je aj porovnanie nákladov medzi domácou a komerčnou alternatívou.
 
 \section{Hardvér}
-Pre potreby projektu som sa snažil vyberať hardvér ktorý má najvyšší pomer cena/výkon. Taktiež som sa snažil vyberať komponenty ktoré sú dostupné na slovenskom trhu.
+Pre potreby projektu som sa snažil vyberať hardvér ktorý má najvyšší pomer cena/výkon. Taktiež som sa snažil vyberať komponenty ktoré sú dostupné na slovenskom trhu. Po výbere a predstavení komponentov si náš systém poskladáme.
 
 \subsection{PC Skriňa}
 Pre naše potreby nám bude stačiť PC skriňa Franctal Design CORE 2500, ktorá je dostatočne veľká na to aby sme do nej mohli nainštalovať všetky potrebné komponenty. Obsahuje aj dostatok pozící pre dátové disky ktorých sa do 3,5" slotov zmestí až 4 a následne pomocou redukcie do 5,25" až 2 čo nám dohromady dáva priestor pre 6 diskov.
@@ -421,16 +421,40 @@ Farba & Žltá \\ \hline
 \caption{Špecifikácie prepojovacieho kábla}
 \end{table}
 
+
+
 \section{Softér}
 Zo softvérovej časti je treba si zvoliť aký typ redundancie dát chceme, aký operačný systém použijeme pre náš projekt.
 
 \subsection{RAID}
 RAID\footnote{Redundance Array of Independent Disks} je metóda, ktorá nám umožňuje kombinovať viacero diskov do jedného logického celku. Jednotlivé typy polí dosahujú v závislosti od konfigurácie rôznu úroveň zabezpečenia dát pred chybami a stratou spôsobenou zlyhaním hardwaru a rôzne veľké zvýšenie výkonu (dátovej priepustnosti) pri diskových operáciách vo vzťahu k počtu diskov, potrebe špecializovaných radičov polí a tým aj cene riešenia.
 
-V našom projekte použijeme RAID 6 ktorý nám zaručuje vysokú redundaciu dát (môžeme prísť až o dva disky) avšak za cenu toho že z celkovej kapacity diskov nám ostane len 50\% (pri 4 diskoch). Avšak nič nám nebráni v prípade potreby použiť až 6 diskov keďže nám to naša PC skriňa umožnuje.
+V našom projekte použijeme RAID 6 ktorý nám zaručuje vysokú redundaciu dát (môžeme prísť až o dva disky) avšak za cenu toho že z celkovej kapacity diskov nám ostane len 50\% (pri 4 diskoch). Avšak nič nám nebráni v prípade potreby použiť až 6 diskov keďže nám to naša PC skriňa umožnuje. Týmto vieme zvýšiť celkovú reálnu kapacitu.
+
+% obrazok RAID 6
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[width=\linewidth]{./images/RAID_6.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{RAID 6 \\ Zdroj: https://sk.wikipedia.org/wiki/RAID}
+\end{figure}
 
 \subsection{Operačný systém}
-Rozhodoval som sa medzi operačnými systémami TrueNAS a OpenMediaVault. Ďalej vysvetliť!!!
+Rozhodoval som sa medzi dvomi operačnými systémami TrueNAS a OpenMediaVault. Podľa internetových recenzií a svojho uváženia som sa rozhodol pre OpenMediaVault. TrueNAS je síce viac profesionálny a podporuje veľa funkcií ale pre naše potreby je OpenMediaVault viac než dostatočný. Je to open-source projekt, čo znamená že má dostupný zdrojový kód a môžeme si ho prispôsobiť podľa našich potrieb.
+
+OpenMediaVault je primárne určený na používanie v domácom prostredí alebo malých domácich kanceláriách, ale nie je obmedzený len na tieto scenáre. Je to jednoduché a ľahko použiteľné riešenie, ktoré môže nainštalovať a spravovať každý bez toho, aby potreboval znalosti na úrovni experta v oblasti sieťových a dátových systémov.
+
+Systém je postavený na modulárnej konštrukcii a možno ho ľahko rozšíriť pomocou pluginov dostupných hneď po inštalácii základného systému. Ďalšie pluginy tretích strán sú k dispozícii prostredníctvom repozitára OMV-Extras.
+
+% obrazok OpenMediaVault
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[width=\linewidth]{./images/OMV6_dashboard.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{Ukážka používateľského rozhrania OMV \\ Zdroj: https://en.wikipedia.org/wiki/OpenMediaVault}
+\end{figure}
 
 \section{Umiestnenie v domácnosti}
 Keďže ide o domáci NAS, ktorý by som sám používal, zameral som sa na umiestnenie v byte, ktoré by bolo pre mňa najvhodnejšie z pohľadu hlučnosti. Rozhodol som sa umiestniť NAS pod stôl v pracovni, kde by nebol počuť, ale zároveň by bol k nemu dobrý prístup. Môžeme si to všimnúť na zjednodušenom pôdoryse[\ref{fig:floorplan}] bytu.
@@ -455,6 +479,9 @@ Legenda:
 \end{figure}
 
 
+\section{Porovnanie s inými riešeniami}
+Lorem ipsum
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|c|}
@@ -462,13 +489,11 @@ Legenda:
 \textbf{Položka} & \textbf{Cena (€)} \\ \hline
 Dátové disky & 4 x 113,90 \\ \hline
 CAT6 FTP kábel &  \\ \hline
-
 \textbf{Celková cena} &  \\ \hline
 \end{tabular}
 \caption{Cena spoločných položiek}
 \end{table}
 
-\section{Porovnanie s inými riešeniami}
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|c|c|c|}
