@@ -9,7 +9,7 @@
 \usepackage{cite}
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage{pdfpages}
-\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage[hyphens]{url} % príkaz \url na formátovanie URL, [hyphens] fixne formatovanie v literature
 \usepackage[hidelinks]{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{float}
@@ -363,9 +363,63 @@ Hmotnosť & 1,93 kg (1 930 g) \\ \hline
 \caption{Špecifikácie zdroja Be quiet! PURE POWER 11 400 W}
 \end{table}
 
-\subsection{Záložný zdroj v podobe UPS}
-
 \subsection{Kabeláž}
+Na prepojenie nášho systému NAS a nášho domáceho PC použijeme tienený (FTP) CAT6 kábel s dĺžkou 15 metrov. Tento kábel je vhodný pre gigabitové siete a je odolný voči prípadnému elektromagnetickému rušeniu. Taktiež budeme potrebovať káble pre pripojenie dátových diskov. Na to použijeme SATA káble ktoré sú súčasťou balenia základnej dosky. Keďže sa tam nachádzajú iba dva káble, tak budeme musieť dokúpiť ďalšie dva.
+
+% obrazok FTP kabla
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.1]{./images/ftp.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{Sieťový kábel - AlzaPower Patch CAT6 FTP 15 m \\ Zdroj: https://www.alza.sk/alzapower-patch-cat6-ftp-15-m-sivy-d6592195.htm}
+\end{figure}
+
+%tabulka špecifikacii FTP kabla
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Typ & Prepojovací kábel \\ \hline
+Male konektor - Typ & RJ-45 \\ \hline
+Male konektor - Štandard & CAT6 \\ \hline
+Male konektor - Počet & 2 × \\ \hline
+Dĺžka kábla & 15 m \\ \hline
+Zakončenie & Rovné \\ \hline
+Tienenie & FTP \\ \hline
+Vlastnosti & Obojstranná koncovka, Tienený kábel \\ \hline
+Farba & Sivá \\ \hline
+\end{tabular}
+\caption{Špecifikácie sieťového kábla}
+\end{table}
+
+% obrazok SATA kabla
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.4]{./images/sata.png} % mozno pouzit width=\linewidth
+	\centering
+	\caption{SATA kábel - PremiumCord SATA III 90° 0.2 m \\ Zdroj: https://www.alza.sk/premiumcord-sata-iii-90-0-2m-d2147595.htm}
+\end{figure}
+
+%tabulka špecifikacii SATA kabla
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Typ & Prepojovací kábel \\ \hline
+Male konektor - Typ & SATA \\ \hline
+Male konektor - Štandard & Serial ATA III \\ \hline
+Male konektor - Počet & 2 × \\ \hline
+Dĺžka kábla & 0,2 m \\ \hline
+Zakončenie & Zahnuté \\ \hline
+Vlastnosti & Obojstranná koncovka \\ \hline
+Farba & Žltá \\ \hline
+\end{tabular}
+\caption{Špecifikácie prepojovacieho kábla}
+\end{table}
 
 \section{Softér}
 Zo softvérovej časti je treba si zvoliť aký typ redundancie dát chceme, aký operačný systém použijeme pre náš projekt.
@@ -400,26 +454,38 @@ Legenda:
 	\label{fig:floorplan}
 \end{figure}
 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Položka} & \textbf{Cena (€)} \\ \hline
+Dátové disky & 4 x 113,90 \\ \hline
+CAT6 FTP kábel &  \\ \hline
+
+\textbf{Celková cena} &  \\ \hline
+\end{tabular}
+\caption{Cena spoločných položiek}
+\end{table}
+
 \section{Porovnanie s inými riešeniami}
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Komponent} & \textbf{Moje riešenie (€)} & \textbf{DIY riešenie (€)} & \textbf{Komerčné riešenie (€)} \\ \hline
+\hline & \multicolumn{3}{c|}{\textbf{Cena (€)}} \\ \hline
+\textbf{Položka} & \textbf{Moje riešenie} & \textbf{DIY riešenie} & \textbf{Komerčné riešenie} \\ \hline
 PC Skriňa & 65,90 &  &  \\ \hline
 Základná doska & 76,90 &  &  \\ \hline
 Procesor & 96,90 &  &  \\ \hline
 Pamäť & 42,90 &  &  \\ \hline
 Bootovací Disk & 15,90 &  &  \\ \hline
-Dátové disky & 4 x 113,90 & 4 x 113,90 & 4 x 113,90 \\ \hline
-Zdroj &  & V cene zariadenia &  \\ \hline
-Sieťová karta & Vstavaná & Vstavaná &  \\ \hline
-Záložný zdroj (UPS) &  &  &  \\ \hline
-Softvér & Zadarmo & Zadarmo &  \\ \hline
-\textbf{Celková cena} &  &  &  \\ \hline
+Zdroj & 61,90 & V cene zariadenia &  \\ \hline
+\textbf{Celková cena} & 360,4 &  &  \\ \hline
 \end{tabular}
 \caption{Porovnanie cien komponentov pre rôzne riešenia}
 \end{table}
+
+
 
 \subsection{Komerčné riešenia}
 
