@@ -48,20 +48,10 @@
 \end{titlepage}
 
 
-
-% ----------------- Abstrakt -----------------
-
-\newpage
-\vspace*{\fill}
-\begin{abstract}
-    Cieľom môjho projektu bude zamerať sa, akým spôsobom si môže bežný človek sprevádzkovať spoľahlivý systém na ukladanie, prípadne zálohovanie dát. Bude sa jednať o návrh a sprevádzkovanie dátového servera (NAS) v domácnosti, ktorý sa bude skladať z bežných počítačových komponentov a jeho zapojenia v počítačovej sieti vrátane potrebnej kabeláže. Neoddeliteľnou súčasťou môjho projektu bude vhodný výber SW riešenia, ktoré bude na tomto HW ``bežať''. Taktiež pôjde o jeho umiestnenie v domácnosti vzhľadom na hlučnosť tohto systému. Na záver by som chcel porovnať cenu s konkurencieschopným komerčným riešením.
-\end{abstract}
-\vspace*{\fill}
-\newpage
-
 % ----------------- Obsah -----------------
 \tableofcontents
 \vspace*{\fill}
+\newpage
 
 % ----------------- Kapitoly -----------------
 
@@ -69,19 +59,78 @@
 \nocite{*}
 
 \section{Úvod}
-Lorem pisum Lorem pisumLorem pisumLorem pisum.
+V dobe, kedy digitálne údaje sú veľmi dôležité nielen pre firmy, ale aj pre jednotlivcov, je nevyhnutné mať spoľahlivé riešenie na ukladanie a zálohovanie údajov. Tento projekt sa zameriava na implementáciu spoľahlivého systému ukladania a zálohovania údajov, ktorý môže bežná osoba prevádzkovať v pohodlí svojho domova. Pôjde o vytvorenie systému NAS\footnote{Network Attached Storage} využívajúcej bežne dostupné počítačové komponenty a sieťovú infraštruktúru. Projekt sa venuje aj výberu vhodného softvéru, ktorý efektívne využije možnosti systému NAS. Okrem toho sa zaoberá umiestnením NAS v domácom prostredí, aby bolo zabezpečené pohodlné používanie bez zbytočného rušenia. Dôležitou súčasťou projektu je aj porovnanie nákladov medzi domácou a komerčnou alternatívou.
 
-\section{Lorem Ipsum}
-Lorem pisumLorem pisumLorem pisum.
+\section{Hardvér}
+Z dôvodu aby sme čo najviac ušetrili peniaze a pomohli planéte pomocou toho že sa budeme riadiť podľa hesla ``Reduce, Reuse, Recycle'' sme sa rozhodli že použijeme starý počítač, ktorý máme doma. Tento počítač bude slúžiť ako základ pre náš NAS systém na ktorom môžeme stavať ďalej alebo ho prípadne vylepšiť.
 
-\section{donor epsum}
-Lorem pisumLorem pisumLorem pisumLorem pisum.
+\subsection{Základná doska}
 
-\section{dalsia sekcia}
-Lorem pisumLorem pisumLorem pisumLorem pisumLorem pisumLorem pisumLorem pisum.
+\subsection{Procesor}
+
+\subsection{Pamäť}
+
+\subsection{Disky}
+
+\subsection{Zdroj}
+
+\subsection{Sieťová karta}
+
+\subsection{Záložný zdroj v podobe UPS}
+
+\section{Softér}
+
+\subsection{RAID}
+
+\subsection{Operačný systém}
+TrueNAS or open media vault
+Setupnut SMB na sieti na pristup
+
+\section{Umiestnenie v domácnosti}
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[width=\linewidth]{./images/nakres-bytu.png}
+	\centering
+	\caption{Pôdorys bytu \\ Zdroj: None, toto som tu nechal len tak}
+\end{figure}
+
+\section{Porovnanie s inými riešeniami}
+
+\subsection{Komerčné riešenia}
+
+\subsection{DIY riešenia}
+Raspberry Pi + disky s OpenMediaVault
+Video od LTT
 
 \section{Záver}
-Lorem pisumLorem pisumLorem pisumLorem pisumLorem pisum.
+
+% bulleted list plus riadkovanie iba na danu cas textu
+\setstretch{1.0}
+\begin{itemize}
+	\item 
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\item 
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\item 
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\item 
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\item 
+		\begin{itemize}
+			\item 
+		\end{itemize}
+\end{itemize}
+
 
 \bibliography{literatura}
 \bibliographystyle{unsrtnat}
