@@ -433,31 +433,31 @@ RAID\footnote{Redundant Array of Independent Disks} je metóda, ktorá nám umo�
 
 RAID má viacero typov, ktoré sa líšia v počte diskov, ktoré môžu zlyhať aby nám nevznikla strata dát. Typy RAIDov:
 \begin{spacing}{1.0}
-	\begin{itemize}
-		\item RAID 0
-			\begin{itemize}
-				\item 
-			\end{itemize}
-		\item RAID 1
-			\begin{itemize}
-				\item 
-			\end{itemize}
-		\item RAID 5
-			\begin{itemize}
-				\item 
-			\end{itemize}
-		\item RAID 6
-			\begin{itemize}
-				\item 
-			\end{itemize}
-		\item RAID 10
-			\begin{itemize}
-				\item 
-			\end{itemize}
-	\end{itemize}
+    \begin{itemize}
+        \item RAID 0
+            \begin{itemize}
+                \item Dáta sú rozdelené medzi viaceré disky pre zvýšenie rýchlosti, ale neponúka žiadnu redundanciu dát. Ak zlyhá jeden disk, prídeme o všetky dáta.
+            \end{itemize}
+        \item RAID 1
+            \begin{itemize}
+                \item Dáta sú zrkadlené na dvoch diskoch pre úplnú redundanciu dát. Môžeme prísť o jeden disk.
+            \end{itemize}
+        \item RAID 5
+            \begin{itemize}
+                \item Používa jeden disk na paritné dáta. Dáta a parita sú rozdelené medzi tri alebo viac diskov. Poskytuje toleranciu chýb pri zlyhaní jedného disku.
+            \end{itemize}
+        \item RAID 6
+            \begin{itemize}
+                \item Podobné ako RAID 5, ale používa dva paritné disky, čo ponúka extra redundanciu dát. Z toho vyplýva že môžeme prísť až o dva disky, ale potrebujeme minimálne 4 disky.
+            \end{itemize}
+        \item RAID 10
+            \begin{itemize}
+                \item Kombinuje RAID 0 a RAID 1. Poskytuje redundanciu RAID 1 spolu so zvýšeným výkonom RAID 0.
+            \end{itemize}
+    \end{itemize}
 \end{spacing}
 
-V našom projekte použijeme RAID 6 ktorý nám zaručuje vysokú redundaciu dát (môžeme prísť až o dva disky) avšak za cenu toho že z celkovej kapacity diskov nám ostane len 50\% (pri 4 diskoch). Avšak nič nám nebráni v prípade potreby použiť až 6 diskov keďže nám to naša PC skriňa umožnuje. Týmto vieme zvýšiť celkovú reálnu kapacitu.
+Rozhodol som sa, že v našom projekte použijeme RAID 6 ktorý nám zaručuje vysokú redundaciu dát (môžeme prísť až o dva disky) avšak za cenu toho že z celkovej kapacity diskov nám ostane len 50\% (pri 4 diskoch). Nič nám však nebráni v prípade potreby použiť až 6 diskov keďže nám to naša PC skriňa umožnuje. Týmto vieme zvýšiť celkovú reálnu kapacitu.
 
 % obrazok RAID 6
 \begin{figure}[H]
@@ -570,7 +570,7 @@ SATA káble & 2 x 2,69 & - &  \\ \hline
 
 
 \section{Záver}
-Z cenových porvnani vyplýva že náš systém NAS je oveľa lacnejší ako komerčné riešenia. Taktiež je oveľa viac konfigurovateľný a môžeme si ho prispôsobiť podľa našich potrieb. Avšak pre náročnejších ľudí, ktorý sa radi hrajú s rôznymi technológiami by bolo DIY\footnote{Do It Yourself} riešenie s pomocou Raspberry Pi prípadne špecializovaného hardvéru (Video od LTT) za podobnú cenu lepšou voľbou.
+Z cenových porvnani vyplýva že náš systém NAS vychádza lacnejšie ako komerčné riešenie. Taktiež je oveľa viac konfigurovateľný a môžeme si ho prispôsobiť podľa našich potrieb. Avšak pre náročnejších ľudí, ktorý sa radi hrajú s rôznymi technológiami by bolo DIY\footnote{Do It Yourself} riešenie s pomocou Raspberry Pi prípadne špecializovaného hardvéru za podobnú cenu lepšou voľbou.
 
 
 \bibliography{literatura}
