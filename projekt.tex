@@ -475,6 +475,8 @@ OpenMediaVault je primárne určený na používanie v domácom prostredí alebo
 
 Systém je postavený na modulárnej konštrukcii a možno ho ľahko rozšíriť pomocou pluginov dostupných hneď po inštalácii základného systému. Ďalšie pluginy tretích strán sú k dispozícii prostredníctvom repozitára OMV-Extras.
 
+Kedže máme veľmi výkonný stroj, tak si vieme nainštalovať plugin Plex Media Server. Tento multimediálny server slúži na lokálne streamovanie filmov uložených na našom systéme NAS. Kedže budeme lokálne dekódovať filmy, tak náš výkonejší procesor nám zaručí plynulé prehrávanie aj pri vyšších rozlíšeniach.
+
 % obrazok OpenMediaVault
 \begin{figure}[H]
 	\centering
@@ -508,7 +510,7 @@ Legenda:
 
 
 \section{Porovnanie s inými riešeniami}
-Ako prvú máme tabuľku s cenami spoločných položiek pre všetky riešenia. Sú tam zahrnuté dátové disky a sieťová kábel z dôvodu že pre všetkých riešeniach by sme tieto položky potrebovali a teda dáva zmysel ich vynechať z porovnania.
+Ako prvú máme tabuľku s cenami spoločných položiek pre všetky riešenia. Sú tam zahrnuté dátové disky a sieťová kábel z dôvodu, že pri všetkých riešeniach by sme tieto položky potrebovali a teda dáva zmysel ich vynechať z porovnania.
 
 \begin{table}[h]
 \centering
@@ -523,7 +525,7 @@ CAT6 FTP kábel & 8,99 \\ \hline
 \end{table}
 
 \subsection{Moje riešenie}
-Lorem ipsum
+Moje riešenie je založené na vysoko výkonných komponentoch a RAID 6 konfigurácii s operačným systémom OpenMediaVault, ktorý je zadarmo. Celková cena komponentov pre moje riešenie je 365,78 €.
 
 \begin{table}[h]
 \centering
@@ -543,35 +545,30 @@ SATA káble & 2 x 2,69 \\ \hline
 \end{table}
 
 \subsection{Komerčné riešenia}
-Lorem ipsum
+Komerčné riešenia som všetky hľadal na internetovom obchode Alza.sk aby boli ceny jednodné, kedže všetky komponenty a ich ceny som vzal práve odtiaľto. Hľadal som systémy NAS s podobnými parametrami ako moje riešenie. Požiadavky boli aby mal systém aspoň 4 pozície pre dátové disky, výkonný procesor a aspoň 8 GB operačnej pamäte RAM. Kedže komerčné riešenia sú ale veľmi špecializované na tento účel, tak vačšina systémou mala slabšie ale zase efektívnejšie procesory (spotreba) a menej operačnej pamäte. Vybral som teda populárne riešenie Synology DS920+ ktoré stojí 689 €. Boli al lacnejšie riešenia ale mali veľmi slabé procesory.
 
 \subsection{DIY riešenia}
-Raspberry Pi + disky s OpenMediaVault
-Video od LTT
+Veľmi veľa ľudí na internete použilo Raspberry Pi ako základ pre svoje DIY\footnote{Do It Yourself} riešenie. Ide o mikropočítač, ktoý je veľký ako kreditná karta. Tieto riešenia sú veľmi lacné ale celkom obmedzené. Ak by sme si chceli vytvoriť systém NAS pomocou Raspberry Pi, tak dobrou voľbou by bolo zvoliť balíček Raspberry Pi aj s príslušenstvom. Išlo by o novú verziu Raspberry Pi 5. Cena tohto balíčku je 135,86€\footnote{Cena z eshopu: https://rpishop.cz}. Oficiálny balíček obsahuje Raspberry Pi 5 8 GB RAM, krabičku, 32 GB kartu micro SD s adaptérom a nainštalovaným operačným systémom Raspberry Pi a napájací zdroj USB-C 5,1 V/5 A.
 
 
+\subsection{Celkové porovnanie}
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|c|c|c|}
-\hline & \multicolumn{3}{c|}{\textbf{Cena (€)}} \\ \hline
-\textbf{Položka} & \textbf{Moje riešenie} & \textbf{Komerčné riešenie} & \textbf{DIY riešenie} \\ \hline
-PC Skriňa & 65,90 & - &  \\ \hline
-Základná doska & 76,90 & - &  \\ \hline
-Procesor & 96,90 & - &  \\ \hline
-Pamäť & 42,90 & - &  \\ \hline
-Bootovací Disk & 15,90 & - &  \\ \hline
-Zdroj & 61,90 & - &  \\ \hline
-SATA káble & 2 x 2,69 & - &  \\ \hline
-\textbf{Celková cena} & 365,78 & 689 &  \\ \hline
+\hline
+\textbf{ } & \textbf{Moje riešenie} & \textbf{Komerčné riešenie} & \textbf{DIY riešenie} \\ \hline
+\textbf{Cena bez zdielaných položiek (€)} & 365,78 & 689 & 135,86 \\ \hline
+\textbf{Celková cena (€)} & 830,97 & 1154,19 & 601,05 \\ \hline
 \end{tabular}
 \caption{Porovnanie cien pre rôzne riešenia}
 \end{table}
 
 
 \section{Záver}
-Z cenových porvnani vyplýva že náš systém NAS vychádza lacnejšie ako komerčné riešenie. Taktiež je oveľa viac konfigurovateľný a môžeme si ho prispôsobiť podľa našich potrieb. Avšak pre náročnejších ľudí, ktorý sa radi hrajú s rôznymi technológiami by bolo DIY\footnote{Do It Yourself} riešenie s pomocou Raspberry Pi prípadne špecializovaného hardvéru za podobnú cenu lepšou voľbou.
+Z cenových porvnani vyplýva že náš systém NAS vychádza lacnejšie ako komerčné riešenie. Taktiež je oveľa viac konfigurovateľný a môžeme si ho prispôsobiť podľa našich potrieb. Avšak pre náročnejších ľudí, ktorý sa radi hrajú s rôznymi technológiami by bolo DIY riešenie s pomocou Raspberry Pi prípadne špecializovaného hardvéru za podobnú cenu lepšou voľbou. Nemá síce obrovský výkon ale ide zaujímavý projekt na ktorom sa dá veľa naučiť a zároveň ako obyčajné úložisko dát bez multimediálneho servera by bolo dostačujúce.
 
+\pagebreak
 
 \bibliography{literatura}
 \bibliographystyle{unsrtnat}
