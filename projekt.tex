@@ -545,11 +545,84 @@ SATA káble & 2 x 2,69 \\ \hline
 \end{table}
 
 \subsection{Komerčné riešenia}
-Komerčné riešenia som všetky hľadal na internetovom obchode Alza.sk aby boli ceny jednodné, kedže všetky komponenty a ich ceny som vzal práve odtiaľto. Hľadal som systémy NAS s podobnými parametrami ako moje riešenie. Požiadavky boli aby mal systém aspoň 4 pozície pre dátové disky, výkonný procesor a aspoň 8 GB operačnej pamäte RAM. Kedže komerčné riešenia sú ale veľmi špecializované na tento účel, tak vačšina systémou mala slabšie ale zase efektívnejšie procesory (spotreba) a menej operačnej pamäte. Vybral som teda populárne riešenie Synology DS920+ ktoré stojí 689 €. Boli al lacnejšie riešenia ale mali veľmi slabé procesory.
+Komerčné riešenia som všetky hľadal na internetovom obchode Alza.sk aby boli ceny jednodné, kedže všetky komponenty a ich ceny som vzal práve odtiaľto. Hľadal som systémy NAS s podobnými parametrami ako moje riešenie. Požiadavky boli aby mal systém aspoň 4 pozície pre dátové disky, výkonný procesor a aspoň 8 GB operačnej pamäte RAM. Kedže komerčné riešenia sú ale veľmi špecializované na tento účel, tak vačšina systémou mala slabšie ale zase efektívnejšie procesory (spotreba) a menej operačnej pamäte. Vybral som teda populárne riešenie Synology DS923+ ktoré stojí 689 €. Boli al lacnejšie riešenia ale mali veľmi slabé procesory.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.4]{./images/synology.png}
+	\centering
+	\caption{Synology DS923+ \\ Zdroj: https://www.alza.sk/synology-ds923-d7579640.htm}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Parameter} & \textbf{Hodnota} \\ \hline
+Maximálna kapacita & 54 TB \\ \hline
+Počet pozícií pre disk & 4 × \\ \hline
+Počet pozícií osadených diskom & 0 × \\ \hline
+Podporovaný RAID & RAID 5, RAID 6, RAID 0+1, RAID 10 (1+0), Špeciálny \\ \hline
+Kompatibilný typ disku & 2,5" SATA HDD, 3,5" SATA HDD, M.2 NVMe \\ \hline
+Podporované služby & Media server (DLNA), Zdieľanie súborov (SAMBA, HFS, CIFS), Nahrávanie z IP kamier, iSCSI, Print server \\ \hline
+Systémová pamäť (RAM) & 3,91 GB (4 000 MB) \\ \hline
+Typ pamäte & DDR4 \\ \hline
+Pamäť RAM rozšíriteľná na & 31,25 GB (32 000 MB) \\ \hline
+Frekvencia procesora & 3,1 GHz \\ \hline
+Rýchlosť čítania & 592 MB/s \\ \hline
+Rýchlosť zápisu & 562 MB/s \\ \hline
+Procesor & AMD Ryzen R1600 \\ \hline
+Využitie & Domáci, Firemný, Monitorovací systém \\ \hline
+Vyhotovenie & Desktop \\ \hline
+eSATA & 1 × \\ \hline
+LAN & 2 × \\ \hline
+USB 3.2 Gen 1 (USB 3.0) & 2 × \\ \hline
+M.2 NVMe & 2 × \\ \hline
+Spotreba v Stand-by & 11,52 W \\ \hline
+Typická spotreba & 35 W \\ \hline
+Hĺbka & 223 mm \\ \hline
+Výška & 166 mm \\ \hline
+Šírka & 199 mm \\ \hline
+Hmotnosť & 2,24 kg \\ \hline
+Obsah balenia & Balíček doplnkov × 1, Napájací kábel × 1, Napájací adaptér × 1, Príručka × 1, Ethernet kábel × 2 \\ \hline
+\end{tabularx}
+\caption{Parametre pre Synology DS920+}
+\end{table}
 
 \subsection{DIY riešenia}
 Veľmi veľa ľudí na internete použilo Raspberry Pi ako základ pre svoje DIY\footnote{Do It Yourself} riešenie. Ide o mikropočítač, ktoý je veľký ako kreditná karta. Tieto riešenia sú veľmi lacné ale celkom obmedzené. Ak by sme si chceli vytvoriť systém NAS pomocou Raspberry Pi, tak dobrou voľbou by bolo zvoliť balíček Raspberry Pi aj s príslušenstvom. Išlo by o novú verziu Raspberry Pi 5. Cena tohto balíčku je 135,86€\footnote{Cena z eshopu: https://rpishop.cz}. Oficiálny balíček obsahuje Raspberry Pi 5 8 GB RAM, krabičku, 32 GB kartu micro SD s adaptérom a nainštalovaným operačným systémom Raspberry Pi a napájací zdroj USB-C 5,1 V/5 A.
 
+Paramtre Raspberry Pi 5:
+\begin{spacing}{0.5}
+\begin{itemize}
+    \item Broadcom BCM2712 2.4GHz štvorjadrový 64-bitový procesor Arm Cortex-A76 s kryptografickými rozšíreniami, 512KB L2 cache na jadro a 2MB zdieľanou L3 cache
+    \item VideoCore VII GPU, podporuje OpenGL ES 3.1, Vulkan 1.2
+    \item Dvojitý 4Kp60 HDMI® výstup s podporou HDR
+    \item 4Kp60 HEVC dekodér
+    \item LPDDR4X-4267 SDRAM (4GB a 8GB)
+    \item Dvojpásmové Wi-Fi® 802.11ac
+    \item Bluetooth 5.0 / Bluetooth Low Energy (BLE)
+    \item Slot pre microSD kartu, s podporou rýchleho režimu SDR104
+    \item 2 × USB 3.0 porty, 5Gbps pre oba porty súčasne
+    \item 2 × USB 2.0 porty
+    \item Gigabit Ethernet, s podporou PoE+ (vyžaduje samostatný PoE+ HAT)
+    \item 2 × 4-lanové MIPI transceivery pre kameru/displej
+    \item PCIe 2.0 x1 rozhranie pre rýchle periférie (vyžaduje samostatný M.2 HAT alebo iný adaptér)
+    \item Napájanie 5V/5A DC cez USB-C, s podporou Power Delivery
+    \item Štandardný 40-pinový header Raspberry Pi
+    \item Real-time clock (RTC), napájané z externej batérie
+    \item Tlačidlo napájania
+\end{itemize}
+\end{spacing}
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering,margin=2cm}
+	\includegraphics[scale=0.3]{./images/rpi.png}
+	\centering
+	\caption{Balíček s Raspberry Pi 5 \\ Zdroj: https://rpishop.cz/startovaci-sady/6508-oficialni-sada-s-raspberry-pi-5-8gb-ram-krabicka-32gb-microsd-prislusenstvi.html}
+\end{figure}
 
 \subsection{Celkové porovnanie}
 
