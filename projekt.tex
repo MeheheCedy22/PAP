@@ -63,10 +63,10 @@
 V dobe, kedy digitálne údaje sú veľmi dôležité nielen pre firmy, ale aj pre jednotlivcov, je nevyhnutné mať spoľahlivé riešenie na ukladanie a zálohovanie údajov. Tento projekt sa zameriava na implementáciu spoľahlivého systému ukladania a zálohovania údajov, ktorý môže bežná osoba prevádzkovať v pohodlí svojho domova. Pôjde o vytvorenie systému NAS\footnote{Network Attached Storage} využívajúcej bežne dostupné počítačové komponenty a sieťovú infraštruktúru. Projekt sa venuje aj výberu vhodného softvéru, ktorý efektívne využije možnosti systému NAS. Okrem toho sa zaoberá umiestnením NAS v domácom prostredí, aby bolo zabezpečené pohodlné používanie bez zbytočného rušenia. Dôležitou súčasťou projektu je aj porovnanie nákladov medzi domácou a komerčnou alternatívou.
 
 \section{Hardvér}
-Pre potreby projektu som sa snažil vyberať hardvér ktorý má najvyšší pomer cena/výkon. Taktiež som sa snažil vyberať komponenty ktoré sú dostupné na slovenskom trhu. Po výbere a predstavení komponentov si náš systém poskladáme.
+Pre potreby projektu som sa snažil vyberať hardvér ktorý má najvyšší pomer cena/výkon. Taktiež som sa snažil vyberať komponenty ktoré sú dostupné na slovenskom trhu. Po výbere a predstavení komponentov si náš systém následne poskladáme.
 
 \subsection{PC Skriňa}
-Pre naše potreby nám bude stačiť PC skriňa Franctal Design CORE 2500, ktorá je dostatočne veľká na to aby sme do nej mohli nainštalovať všetky potrebné komponenty. Obsahuje aj dostatok pozící pre dátové disky ktorých sa do 3,5" slotov zmestí až 4 a následne pomocou redukcie do 5,25" až 2 čo nám dohromady dáva priestor pre 6 diskov.
+Pre naše potreby nám bude stačiť PC skriňa Franctal Design CORE 2500, ktorá je dostatočne veľká na to aby sme do nej mohli nainštalovať všetky potrebné komponenty. Obsahuje aj dostatok pozící pre dátové disky ktorých sa do 3,5'' slotov zmestí až 4 a následne pomocou redukcie do 5,25'' až 2 čo nám dohromady dáva priestor pre 6 diskov.
 
 % obrazok PC skrine
 \begin{figure}[H]
@@ -117,7 +117,7 @@ Hmotnosť & 5,7 kg \\ \hline
 \end{table}
 
 \subsection{Základná doska}
-Základná doska ASUS PRIME B450M-A II je ideálnou voľbou pre naše potreby. Ide o základnú dosku so starším AM4 socketom, ktorý však podporuje procesory dostatočne výkonné pre naše potreby a čipsetom B450. Doska obsahuje 4 sloty pre operačnú pamäť RAM, ktoré nám umožnia neskôr rozšíriť pamäťovú kapacitu ak bude treba keďže budeme osádzať iba 2 sloty. Taktiež obsahuje 6 SATA portov, ktoré nám umožnia pripojiť dostatočné množstvo diskov. Obsahuje aj jeden PCIe 3.0 x16 slot, ktorý nám umožní pripojiť sieťovú kartu s vysokou priepustnosťou alebo pomôže rozšíriť kapacitu diskov pomocou pripojenia redukcie na SATA porty.
+Základná doska ASUS PRIME B450M-A II je ideálnou voľbou pre naše potreby. Ide o základnú dosku so starším AM4 socketom, ktorý však podporuje procesory dostatočne výkonné pre naše potreby a čipsetom B450. Doska obsahuje 4 sloty pre operačnú pamäť RAM, ktoré nám umožnia neskôr rozšíriť pamäťovú kapacitu ak bude treba keďže budeme osádzať iba 2 sloty. Taktiež obsahuje 6 SATA portov, ktoré nám umožnia pripojiť dostatočné množstvo diskov. Obsahuje aj jeden PCIe 3.0 x16 slot, ktorý nám umožnuje pripojiť sieťovú kartu s vyššou priepustnosťou alebo pomôže rozšíriť kapacitu diskov pomocou pripojenia redukcie na SATA porty.
 
 % obrazok základnej dosky
 \begin{figure}[H]
@@ -196,7 +196,7 @@ L3 cache & 8 MB \\ \hline
 \end{table}
 
 \subsection{Pamäť}
-Pre naše potreby použijeme 16 GB operačnej pamäte RAM. Je to viac než dosť a bude nám to tvoriť rezervu do budúcna. Vybral som dva moduly Kingston Fury s kapacitou 8 GB a frekvenciou 3200 MHz (2x8GB). Pamäť síce nie nemá funkcionalitu ECC\footnote{Error-correcting code}, avšak potom by sme potrebovali oveľa drahšiu základnú dosku ktorá toto potrebuje.
+Pre naše potreby použijeme 16 GB operačnej pamäte RAM. Je to viac než dosť a bude nám to tvoriť rezervu do budúcna. Vybral som dva moduly Kingston Fury s kapacitou 8 GB a frekvenciou 3200 MHz (2x8GB). Pamäť síce nie nemá funkcionalitu ECC\footnote{Error-correcting code}, avšak potom by sme potrebovali oveľa drahšiu základnú dosku a procesor, ktoré túto funkcionalitu podporujú.
 
 % obrazok pamäte
 \begin{figure}[H]
@@ -237,7 +237,7 @@ RGB ovládanie & Nepodporuje \\ \hline
 Náš systém bude potrebovať okrem dátových diskov aj disk, kde bude uložený samotný operačný systém (bootovací disk). Na tento účel nám bude slúžiť práve SSD disk, ktorý bude umiestnený v M.2 slote na základnej doske.
 
 \subsubsection{Bootovací disk}
-Ako bootovací disk nám bude bohate postačovať Patriot P300 s veľkosťou 128GB. Disk má rozhranie PCIe verzie 3.0 čo je síce starší štandard ale na naše potreby bude stačiť a naša základná doska aj tak nepodporuje novší štandard. Veľkosť disku prekračuje potreby operačného systému ale keďže ide o veľmi lacnú položku, tak sa neoplatí kupovať nejaký nespoľahlivý USB disk s menšou kapacitou alebo SD kartu. Radšej investupjeme do kvalitného SSD disku ktorý nám bude slúžiť aj do budúcna.
+Ako bootovací disk nám bude bohate postačovať Patriot P300 s veľkosťou 128GB. Disk má rozhranie PCIe verzie 3.0 čo je síce starší štandard ale na naše potreby bude stačiť a naša základná doska aj tak nepodporuje novší štandard. Veľkosť disku prekračuje potreby operačného systému ale keďže ide o veľmi lacnú položku, tak sa neoplatí kupovať nejaký nespoľahlivý USB disk s menšou kapacitou alebo SD kartu. Radšej investujeme do kvalitného SSD disku ktorý nám bude slúžiť aj do budúcna.
 
 % obrazok boot disku
 \begin{figure}[H]
@@ -283,7 +283,7 @@ Stand-by spotreba (pohotovostná) & 0,37 W (370 mW) \\ \hline
 
 
 \subsubsection{Dátové disky}
-Pri výbere dátových diskov (najdôležitejšou časťou pre nás) som zohľadniľ internetové recenzie a moje doterajšie znalosti. Rozhodoval som sa medzi WD Red Pro a Seagate IronWolf Pro. Nakoniec som zvolil Seagate IronWolf Pro pretože boli viacej doporučované na internete a majú väčšiu vyrovnávaciu pamäť (cache) čo nám zvýši rýchlosť pri čítaní a zápise dát. Zvolil som 2 TB verziu pretože na naše účely by to bolo dostatočné. Keďže pôjde o 4 disky, tak nám to dáva celkovú kapacitu 8 TB. Ale kvôli použitiu RAIDu\footnote{pozri kapitola RAID} 6 nám ostane len 4 TB reálneho miesta.
+Pri výbere dátových diskov (najdôležitejšou časťou pre nás) som zohľadniľ internetové recenzie a moje doterajšie znalosti. Rozhodoval som sa medzi WD Red Pro a Seagate IronWolf Pro. Nakoniec som zvolil Seagate IronWolf Pro pretože boli viacej doporučované na internete a majú väčšiu vyrovnávaciu pamäť (cache) čo nám zvýši rýchlosť pri čítaní a zápise dát. Zvolil som 2 TB verziu pretože na naše účely by to bolo dostatočné. Keďže pôjde o 4 disky, tak nám to dáva celkovú kapacitu 8 TB. Ale kvôli použitiu redundancie nám ostanú ``len'' 4 TB reálneho miesta.
 
 % obrazok data disku
 \begin{figure}[H]
@@ -429,7 +429,33 @@ Farba & Žltá \\ \hline
 Zo softvérovej časti je treba si zvoliť aký typ redundancie dát chceme, aký operačný systém použijeme pre náš projekt.
 
 \subsection{RAID}
-RAID\footnote{Redundance Array of Independent Disks} je metóda, ktorá nám umožňuje kombinovať viacero diskov do jedného logického celku. Jednotlivé typy polí dosahujú v závislosti od konfigurácie rôznu úroveň zabezpečenia dát pred chybami a stratou spôsobenou zlyhaním hardvéru a rôzne veľké zvýšenie výkonu (dátovej priepustnosti) pri diskových operáciách vo vzťahu k počtu diskov, potrebe špecializovaných radičov polí a tým aj cene riešenia.
+RAID\footnote{Redundant Array of Independent Disks} je metóda, ktorá nám umožňuje kombinovať viacero diskov do jedného logického celku. Jednotlivé typy polí dosahujú v závislosti od konfigurácie rôznu úroveň zabezpečenia dát pred chybami a stratou spôsobenou zlyhaním hardvéru a rôzne veľké zvýšenie výkonu (dátovej priepustnosti) pri diskových operáciách vo vzťahu k počtu diskov, potrebe špecializovaných radičov polí a tým aj cene riešenia.
+
+RAID má viacero typov, ktoré sa líšia v počte diskov, ktoré môžu zlyhať aby nám nevznikla strata dát. Typy RAIDov:
+\begin{spacing}{1.0}
+	\begin{itemize}
+		\item RAID 0
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\item RAID 1
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\item RAID 5
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\item RAID 6
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\item RAID 10
+			\begin{itemize}
+				\item 
+			\end{itemize}
+	\end{itemize}
+\end{spacing}
 
 V našom projekte použijeme RAID 6 ktorý nám zaručuje vysokú redundaciu dát (môžeme prísť až o dva disky) avšak za cenu toho že z celkovej kapacity diskov nám ostane len 50\% (pri 4 diskoch). Avšak nič nám nebráni v prípade potreby použiť až 6 diskov keďže nám to naša PC skriňa umožnuje. Týmto vieme zvýšiť celkovú reálnu kapacitu.
 
